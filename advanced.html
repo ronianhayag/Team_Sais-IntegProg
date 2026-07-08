@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google Advanced Search</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 24px;
+                background: #22242a;
+                color: #c0c0c0;
+            }
+            form {
+                max-width: 640px;
+            }
+            .field-group {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 16px;
+                margin-bottom: 16px;
+            }
+            .field-group label {
+                width: 180px;
+                font-size: 14px;
+                white-space: nowrap;
+                text-align: left;
+            }
+            .field-group input[type="text"] {
+                flex: 1;
+                min-width: 0;
+                box-sizing: border-box;
+                padding-top: calc(20px * var(--google-fs, 1) / 2 + 2px);
+                padding-bottom: calc(20px * var(--google-fs, 1) / 2 + 2px);
+                border: 1px solid #c0c0c0;
+                border-radius: 4px;
+                font-size: 14px;
+                text-align: left;
+                background-color: inherit;
+                color: inherit;
+            }
+            .advanced-submit {
+                background: #a8c7fa;
+                color: #000000;
+                border: none;
+                padding: 11px 15px;
+                font-size: 14px;
+                border-radius: 9999px;
+                cursor: pointer;
+            }
+            .advanced-submit:hover {
+                background: #bbd5ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="advanced-container">
+            <header class="search-header">
+                <img alt="" src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_clr_92x30px.svg" data-defe="1">
+                <div>
+                    <h1>Advanced Search</h1>
+                    <p>Find pages with</p>
+                </div>
+            </header>
+            <form action="https://www.google.com/search" method="get">
+            <div class="field-group">
+                <label for="all-words">All these words:</label>
+                <input type="text" id="all-words" name="as_q" placeholder="">
+            </div>
+            <div class="field-group">
+                <label for="exact-phrase">This exact word or phrase:</label>
+                <input type="text" id="exact-phrase" name="as_epq" placeholder="">
+            </div>
+            <div class="field-group">
+                <label for="none-words">None of these words:</label>
+                <input type="text" id="none-words" name="as_oq" placeholder="">
+            </div>
+            <div class="field-group">
+                <label for="none-words">None of these words:</label>
+                <input type="text" id="none-words" name="as_eq" placeholder="">
+            </div>
+            <button type="submit" class="advanced-submit">Advanced Search</button>
+            </form>
+        </div>
+    </body>
+</html>
